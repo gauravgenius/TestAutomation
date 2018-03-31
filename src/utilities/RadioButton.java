@@ -1,4 +1,4 @@
-package example.script;
+package utilities;
 
 import java.util.List;
 
