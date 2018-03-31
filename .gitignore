@@ -1,1 +1,15 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Libraries
+.classpath
+
+# Project
+.project
+
+# Output 
+/test-output/
 /bin/
