@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class MySQLConnection1 {
+public class MySQLConnection {
 
 	private static Connection connection;
 	private String sql;
@@ -14,7 +14,7 @@ public class MySQLConnection1 {
 	private String user;
 	private String password;
 
-	public MySQLConnection1(String databaseURL, String user, String password) {
+	public MySQLConnection(String databaseURL, String user, String password) {
 		
 		this.database = databaseURL;
 		this.user = user;
