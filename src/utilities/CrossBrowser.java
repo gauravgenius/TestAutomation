@@ -8,30 +8,34 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class CrossBrowser {
+	WebDriver driver;
 	
-		WebDriver driver;
-		@Test
-		@Parameters("browser")
-		public void verifyTitle(String browsername)
-		{
-			if (browsername.equalsIgnoreCase("firefox"))
-			{
-				//System.setProperty("webdriver.gecko.driver", "C:\\geckodriver-v0.19.1-win64\\geckodriver.exe");
+	@Test
+	@Parameters("browser")
+	public void launchBrowser(String browsername){
+			
+			if (browsername.equalsIgnoreCase("firefox")){
+				System.setProperty("webdriver.gecko.driver", "C:/WebDrivers/geckodriver.exe");
 				driver = new FirefoxDriver();
 			}
-			else if (browsername.equalsIgnoreCase("chrome"))
-			{
+			
+			else if (browsername.equalsIgnoreCase("chrome")){
 				System.setProperty("webdriver.chrome.driver","/home/kumar/Selenium/chromedriver");
 				driver = new ChromeDriver();
 			}
-			else if (browsername.equalsIgnoreCase("IE"))
-			{
-				System.setProperty("webdriver.ie.driver", "C:\\IEDriverServer_x64_3.6.0\\IEDriverServer.exe");
+			
+			else if (browsername.equalsIgnoreCase("IE")){
+				System.setProperty("webdriver.gecko.driver", "C:/WebDrivers/MicrosoftWebDriver.exe");
 				driver = new InternetExplorerDriver();
 			}
-			driver.manage().window().maximize();
+			
+			else {
+				System.out.print("Associated browser not found");
+				System.exit(1);
+			}
+			
 			driver.get("https://www.google.com");
-			//System.out.println(driver.getPageSource());
+			System.out.println(driver.getPageSource());
 		}
 }
 
