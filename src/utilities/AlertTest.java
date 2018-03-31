@@ -18,11 +18,7 @@ public class AlertTest {
 		options.setExperimentalOption("prefs", prefs);
         WebDriver driver = new ChromeDriver(options);
         
-        
-
-        //Method 1
         driver.get("https://www.redbus.in/");
         Thread.sleep(5000);
-
-}
+	}
 }

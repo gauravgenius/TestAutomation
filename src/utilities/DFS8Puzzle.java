@@ -14,7 +14,6 @@ public class DFS8Puzzle {
 			String start = "081243765";
 			String goal = "123804765";
 			String X = "";
-			String temp = "";
 
 			OPEN.add(start);
 

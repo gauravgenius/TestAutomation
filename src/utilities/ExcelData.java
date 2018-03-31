@@ -8,7 +8,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 public class ExcelData {
     HSSFWorkbook  wb;
-    HSSFSheet sheet1;
+    HSSFSheet sheet;
     HSSFCell cell;
 
     public ExcelData(String fileName) throws Exception {
@@ -17,19 +17,19 @@ public class ExcelData {
         wb = new HSSFWorkbook(fis);
     }
 
-    public  String getData(int sheetNumber, int row, int column) { 
+    public String getData(int sheetNumber, int row, int column) { 
 
-        sheet1 = wb.getSheetAt(sheetNumber);
+        sheet = wb.getSheetAt(sheetNumber);
         String data = "";
         try{
-            cell = sheet1.getRow(row).getCell(column);
+            cell = sheet.getRow(row).getCell(column);
             switch(cell.getCellTypeEnum()) {
                 
                 case NUMERIC:
-                    data = cell.getNumericCellValue()     +   "\t\t";
+                    data = cell.getStringCellValue();
                     break;
                 case STRING:
-                    data = cell.getStringCellValue()   +     "\t\t";
+                    data = cell.getStringCellValue();
                     break;
                 default:
                     break;
