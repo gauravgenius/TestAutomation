@@ -1,15 +1,19 @@
 # TestAutomation	
+
 Contains my self learnings 
 
-# Prerequisites
+## Prerequisites
+
 ChromeDriver
 FirefoxDriver
 Selenium WebDriver
 TestNG
 
-# Built With
+## Built With
+
 TestNG - The web framework used
 Selenium Webdriver - Automation 
 
-# Author
+## Author
+
 Gaurav Katiyar
